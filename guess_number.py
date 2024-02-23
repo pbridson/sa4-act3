@@ -1,4 +1,5 @@
 import random
+
 number = random.randint(1, 20)
 
 print("I'm thinking of a number between 1 and 20...")
@@ -15,8 +16,8 @@ while guess != number:
       print(f"The number was {number}.")
       break
     guess = int(input("Try again or enter q to quit: "))
-  except:
+  except ValueError:
     print(f"You give up! The number was {number}.")
     break
-else:                 
+else:   
   print("Congratulations! You guessed the right number.")
